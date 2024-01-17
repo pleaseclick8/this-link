@@ -9,6 +9,37 @@
     <title>flowers</title>
 </head>
 <body class="container">
+ <div>
+      <audio id="backgroundMusic" loop>
+        <source src="jadikekasihkusaja.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+      </audio>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Tambahkan event listener untuk click pada body
+          document.body.addEventListener('click', function() {
+            playMusic();
+          });
+
+          // Putar musik setelah 2 detik
+          setTimeout(function() {
+            playMusic();
+          }, 2000);
+        });
+
+        function playMusic() {
+          var audioElement = document.getElementById('backgroundMusic');
+          
+          // Cek apakah audio sudah dimainkan atau belum
+          if (audioElement.paused) {
+            audioElement.play();
+          }
+
+          // Tambahkan logika perubahan teks atau aksi lainnya di sini
+        }
+      </script>
+    </div>
   <!-- Pembuat code: https://codepen.io/mdusmanansari/pen/BamepLe -->
     <div class="night"></div>
     <div class="flowers">
@@ -309,37 +340,5 @@
     </div>
     <script src="main.js"></script>
     <div>
-    <script src="main.js"></script>
-    <div>
-      <audio id="backgroundMusic" loop>
-        <source src="jadikekasihkusaja.mp3" type="audio/mp3">
-        Your browser does not support the audio tag.
-      </audio>
-
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          // Tambahkan event listener untuk click pada body
-          document.body.addEventListener('click', function() {
-            playMusic();
-          });
-
-          // Putar musik setelah 2 detik
-          setTimeout(function() {
-            playMusic();
-          }, 2000);
-        });
-
-        function playMusic() {
-          var audioElement = document.getElementById('backgroundMusic');
-          
-          // Cek apakah audio sudah dimainkan atau belum
-          if (audioElement.paused) {
-            audioElement.play();
-          }
-
-          // Tambahkan logika perubahan teks atau aksi lainnya di sini
-        }
-      </script>
-    </div>
   </body>
 </html>
