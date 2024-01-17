@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .text-container {
+      text-align: center;
+      position: relative;
+      padding: 0 20px; /* Tambahkan jarak di sisi kanan dan kiri */
+    }
+
+    .text-with-shadow {
+      font-size: 24px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      transition: all 0.5s ease-in-out;
+      max-width: 600px; /* Batasi lebar teks */
+      margin: 0 auto; /* Pusatkan teks */
+    }
+
+    @media screen and (max-width: 600px) {
+      .text-with-shadow {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="text-container">
+    <p class="text-with-shadow">Hello Aprilia Maulida</p>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        changeText('i want to tell you about my feeling', 3000);
+      }, 2000); // Ganti teks setelah 2 detik
+    });
+
+    function changeText(newTextContent, delay) {
+      var textContainer = document.querySelector('.text-container');
+      var currentText = document.querySelector('.text-with-shadow');
+      
+      var newText = document.createElement('p');
+      newText.classList.add('text-with-shadow');
+      newText.textContent = newTextContent;
+
+      textContainer.replaceChild(newText, currentText);
+
+      setTimeout(function() {
+        changeText('Over time, I realize that my feelings for you are growing into something more. I like you, and I hope you can feel it too.', 6500);
+      }, delay); // Ganti teks lagi setelah delay
+
+      if (newTextContent === 'Over time, I realize that my feelings for you are growing into something more. I like you, and I hope you can feel it too.') {
+        setTimeout(function() {
+          window.location.href = 'flower.html'; // Alihkan ke halaman baru setelah beberapa detik
+        }, delay + 2000); // Alihkan setelah delay + 3 detik
+      }
+    }
+  </script>
+</body>
+</html>
