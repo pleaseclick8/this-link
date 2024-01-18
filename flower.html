@@ -10,8 +10,8 @@
 </head>
 <body class="container">
  <div>
-      <audio id="backgroundMusic" loop>
-        <source src="jadikekasihkusaja.mp3" type="audio/mp3" autoplay>
+      <audio id="backgroundMusic" loop autoplay>
+        <source src="jadikekasihkusaja.mp3" type="audio/mp3">
         Your browser does not support the audio tag.
         </audio>
       <script>
@@ -19,7 +19,7 @@
             // Auto click after a delay
          setTimeout(function() {
          document.body.click();
-          }, 2000); // Change the delay (in milliseconds) as needed
+          }, 200); // Change the delay (in milliseconds) as needed
 
         function playMusic() {
           var audioElement = document.getElementById('backgroundMusic');
