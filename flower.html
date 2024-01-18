@@ -10,23 +10,34 @@
 </head>
 <body class="container">
  <div>
+     
+<!-- Popup JavaScript -->
+<div id="popup">
+  <p>Klik di bawah untuk memulai audio:</p>
+  <button onclick="playAudio()">Mulai Audio</button>
+</div>
 
-<!-- Tambahkan pesan atau tombol untuk interaksi pengguna -->
-<p>Klik di bawah untuk memulai audio:</p>
-<button onclick="playAudio()">Play Audio</button>
-
-<audio id="myAudio" loop autoplay>
+<!-- Audio dengan Autoplay -->
+<audio id="myAudio" autoplay>
   <source src="jadikekasihkusaja.mp3" type="audio/mp3">
   Your browser does not support the audio element.
 </audio>
 
 <script>
+  // Fungsi untuk memutar audio
   function playAudio() {
     var audio = document.getElementById("myAudio");
     audio.play();
+    // Sembunyikan popup setelah memulai audio
+    document.getElementById("popup").style.display = "none";
   }
+
+  // Tampilkan popup saat halaman dimuat
+  window.onload = function() {
+    document.getElementById("popup").style.display = "block";
+  };
 </script>
-    </div>
+ </div>
   <!-- Pembuat code: https://codepen.io/mdusmanansari/pen/BamepLe -->
     <div class="night"></div>
     <div class="flowers">
