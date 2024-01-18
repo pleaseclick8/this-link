@@ -16,26 +16,15 @@
         </audio>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
-          // Tambahkan event listener untuk click pada body
-          document.body.addEventListener('click', function() {
-            playMusic();
-          });
-
-          // Putar musik setelah 2 detik
-          setTimeout(function() {
-            playMusic();
-          }, 200);
-        });
+            // Auto click after a delay
+         setTimeout(function() {
+         document.body.click();
+          }, 2000); // Change the delay (in milliseconds) as needed
 
         function playMusic() {
           var audioElement = document.getElementById('backgroundMusic');
           
-          // Cek apakah audio sudah dimainkan atau belum
-          if (audioElement.paused) {
-            audioElement.play();
-          }
-
-          // Tambahkan logika perubahan teks atau aksi lainnya di sini
+    
         }
       </script>
     </div>
