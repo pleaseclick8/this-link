@@ -10,12 +10,11 @@
 </head>
 <body class="container">
  <div>
-      <script>
-        <audio id="backgroundMusic" loop>
+      <audio id="backgroundMusic" loop>
         <source src="jadikekasihkusaja.mp3" type="audio/mp3">
         Your browser does not support the audio tag.
         </audio>
-          
+      <script>
         document.addEventListener('DOMContentLoaded', function() {
           // Tambahkan event listener untuk click pada body
           document.body.addEventListener('click', function() {
@@ -25,7 +24,7 @@
           // Putar musik setelah 2 detik
           setTimeout(function() {
             playMusic();
-          }, 2000);
+          }, 200);
         });
 
         function playMusic() {
